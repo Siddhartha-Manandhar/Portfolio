@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Portfolio</div>
+            <ul class="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <canvas id="binary-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-main">
+                <div class="hero-badge">Learning to code since 2021</div>
+                <h1 class="hero-title">
+                    <span class="title-line">Siddhartha</span>
+                    <span class="title-line">Manandhar</span>
+                </h1>
+                <h2 class="hero-subtitle-large"><span id="typing-text"></span><span class="typing-cursor">|</span></h2>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-intro">
+            <div class="container">
+                <p class="about-badge">Learning to code since 2021</p>
+                <h2 class="large-text">Learn today. Practice tomorrow. Stay long enough, and mastery follows.</h2>
+            </div>
+        </div>
+        
+        <!-- Horizontal Gallery -->
+        <div class="container">
+            <h2 class="gallery-title">MY JOURNEY</h2>
+        </div>
+        <div class="horizontal-gallery">
+            <div class="gallery-track">
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <p class="gallery-caption">Project with GUI, 2025</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <p class="gallery-caption">Joined KSC, 2025</p>
+                    </div>
+                </div>
+                <div class="gallery-item large">
+                    <div class="gallery-quote">
+                        <p class="quote-text">"Move at your own pace, and let the journey teach you."</p>
+                        <div class="signature">— Siddhartha Manandhar</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <p class="gallery-caption">First Project, 2024</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <p class="gallery-caption">Joined KhEC, 2023</p>
+                    </div>
+                </div>
+                <div class="gallery-item large">
+                    <div class="gallery-stats">
+                        <div class="stat-big">
+                            <h3 class="stat-number" data-target="2">2</h3>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-big">
+                            <h3 class="stat-number" data-target="4">4</h3>
+                            <p>Years Coding</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <p class="gallery-caption">First Code, 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about-quote-section">
+            <div class="container">
+                <p class="big-quote">Long ago, I imagined becoming someone who could build his own world. I'm not there yet but I think I'm getting there.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section with Horizontal Scroll -->
+    <section id="skills" class="skills-section">
+        <div class="container-full">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-scroll-wrapper">
+                <div class="skills-scroll-container">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Frontend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="35"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="35"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="30"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-server"></i> Backend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="55"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-copyright"></i>
+                                <span>C</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="65"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-copyright"></i>
+                                <span>C++</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="65"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-tools"></i> Tools</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="70"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-language"></i> Spoken Languages</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fas fa-flag"></i>
+                                <span>Nepali</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-flag-usa"></i>
+                                <span>English</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-globe"></i>
+                                <span>Hindi</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category hobbies-category">
+                        <h3><i class="fas fa-heart"></i> Hobbies</h3>
+                        <div class="hobbies-grid">
+                            <div class="hobby-item">
+                                <i class="fas fa-code"></i>
+                                <span>Coding</span>
+                            </div>
+                            <div class="hobby-item">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Gaming</span>
+                            </div>
+                            <div class="hobby-item">
+                                <i class="fas fa-compass"></i>
+                                <span>Exploring</span>
+                            </div>
+                            <div class="hobby-item">
+                                <i class="fas fa-utensils"></i>
+                                <span>Cooking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-hint">
+                <i class="fas fa-arrow-right"></i> Scroll horizontally
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="projects-banner">
+            <div class="banner-content">
+                <h2 class="banner-title">MY WORK</h2>
+                <p class="banner-description">Check out my projects and contributions on GitHub</p>
+                <a href="https://github.com/Siddhartha-Manandhar?tab=repositories" target="_blank" rel="noopener noreferrer" class="banner-link">
+                    <i class="fab fa-github"></i> VIEW ON GITHUB <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2 class="section-title-small">RECENT WORK</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-number">01</div>
+                    <div class="project-content">
+                        <h3>Music Quiz Game</h3>
+                        <p class="project-year">2025</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Tkinter</span>
+                            <span>Pygame</span>
+                        </div>
+                    </div>
+                    <div class="project-preview">
+                        <div class="project-icon-large">
+                            <i class="fas fa-music"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">02</div>
+                    <div class="project-content">
+                        <h3>Todo List App</h3>
+                        <p class="project-year">2025</p>
+                        <div class="project-tech">
+                            <span>C++</span>
+                            <span>Graphics.h</span>
+                        </div>
+                    </div>
+                    <div class="project-preview">
+                        <div class="project-icon-large">
+                            <i class="fas fa-list-check"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">03</div>
+                    <div class="project-content">
+                        <h3>Sankhet: A text based adventure game</h3>
+                        <p class="project-year">2025</p>
+                        <div class="project-tech">
+                            <span>C++</span>
+                            <span>Graphics.h</span>
+                            
+                        </div>
+                    </div>
+                    <div class="project-preview">
+                        <div class="project-icon-large">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section with Horizontal Scroll -->
+    <section id="achievements" class="achievements-section">
+        <div class="container-full">
+            <h2 class="section-title-large">HALL OF FAME</h2>
+            <p class="section-subtitle">From innovative projects to industry recognition, a showcase of achievements and milestones throughout my career.</p>
+            <div class="achievements-scroll-wrapper">
+                <div class="achievements-scroll-container">
+                    <div class="achievement-card">
+                        <div class="achievement-visual">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <h3>Hult Prize Winner (College level)</h3>
+                            <p class="achievement-year">2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-hint">
+                <i class="fas fa-arrow-right"></i> Scroll horizontally
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title-large">LET'S BUILD</h2>
+            <h2 class="section-title-large accent">SOMETHING GREAT.</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:siddharthamanandhar61@gmail.com">siddharthamanandhar61@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <a href="tel:+9779812301866">+977 9812301866</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Gamcha, Suryabinayak, Nepal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <h3>Follow Me</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/Siddhartha-Manandhar" class="social-icon" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/siddhartha-manandhar-639b0337a/" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/siddhartha.manandhar.12/" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/newarsiddhartha/" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <i class="fas fa-comment"></i>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h3 class="footer-tagline">ALWAYS PUSHING FORWARD.</h3>
+                    <a href="mailto:siddharthamanandhar61@gmail.com" class="footer-email">siddharthamanandhar61@gmail.com</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Siddhartha Manandhar. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="#">PRIVACY POLICY</a>
+                        <a href="#">TERMS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
