@@ -4,6 +4,50 @@
     box-sizing: border-box;
 }
 
+/* Music Toggle Button */
+.music-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(20, 20, 20, 0.9);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    animation: colorShift 60s linear infinite;
+    box-shadow: 0 4px 15px rgba(158, 255, 0, 0.3);
+}
+
+.music-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(158, 255, 0, 0.5);
+}
+
+.music-toggle.playing {
+    animation: colorShift 60s linear infinite, pulse 2s ease-in-out infinite;
+}
+
+.music-toggle.paused {
+    opacity: 0.6;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(158, 255, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 6px 25px rgba(158, 255, 0, 0.6);
+    }
+}
+
 :root {
     --primary-color: #9eff00;
     --secondary-color: #ffffff;

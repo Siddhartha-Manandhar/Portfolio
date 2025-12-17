@@ -1,3 +1,55 @@
+// Background Music Control
+const bgMusic = document.getElementById('bgMusic');
+const musicToggle = document.getElementById('musicToggle');
+let isPlaying = false;
+let musicStarted = false;
+
+if (musicToggle && bgMusic) {
+    // Set initial volume (lower)
+    bgMusic.volume = 0.1;
+    
+    // Auto-play on first user interaction anywhere on the page
+    const startMusicOnInteraction = () => {
+        if (!musicStarted) {
+            bgMusic.play().then(() => {
+                isPlaying = true;
+                musicStarted = true;
+                musicToggle.classList.add('playing');
+                musicToggle.innerHTML = '<i class="fas fa-pause"></i>';
+            }).catch(err => {
+                console.log('Audio play failed:', err);
+            });
+            
+            // Remove listeners after first interaction
+            document.removeEventListener('click', startMusicOnInteraction);
+            document.removeEventListener('scroll', startMusicOnInteraction);
+            document.removeEventListener('keydown', startMusicOnInteraction);
+        }
+    };
+    
+    // Listen for any user interaction
+    document.addEventListener('click', startMusicOnInteraction);
+    document.addEventListener('scroll', startMusicOnInteraction);
+    document.addEventListener('keydown', startMusicOnInteraction);
+    
+    // Toggle button
+    musicToggle.addEventListener('click', () => {
+        musicStarted = true;
+        if (isPlaying) {
+            bgMusic.pause();
+            musicToggle.classList.remove('playing');
+            musicToggle.classList.add('paused');
+            musicToggle.innerHTML = '<i class="fas fa-music"></i>';
+        } else {
+            bgMusic.play().catch(err => console.log('Audio play failed:', err));
+            musicToggle.classList.add('playing');
+            musicToggle.classList.remove('paused');
+            musicToggle.innerHTML = '<i class="fas fa-pause"></i>';
+        }
+        isPlaying = !isPlaying;
+    });
+}
+
 // Binary Galaxy Background
 const canvas = document.getElementById('binary-canvas');
 const ctx = canvas.getContext('2d');
